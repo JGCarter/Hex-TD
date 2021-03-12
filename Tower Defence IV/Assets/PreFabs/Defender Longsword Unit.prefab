@@ -1,0 +1,583 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7443881673334045941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6094946038007079056}
+  - component: {fileID: -2153405412599977516}
+  m_Layer: 0
+  m_Name: Defender Longsword Unit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6094946038007079056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443881673334045941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4315988436696457377}
+  - {fileID: 4315988437782919665}
+  - {fileID: 4315988437729153249}
+  - {fileID: 4315988436868735333}
+  - {fileID: 4315988436985376308}
+  - {fileID: 4315988437183445789}
+  - {fileID: 4315988436372441463}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2153405412599977516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443881673334045941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab81c3ccf54eec4d8071144f9299aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitCost: 300
+  unitName: Longswords
+  range: 4
+  upgrade1: {fileID: 0}
+  upgrade2: {fileID: 0}
+  upgrade3: {fileID: 0}
+--- !u!1001 &7737770311840472022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988436372441463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770311840472022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770312086893056
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988436696457377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770312086893056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770312267068356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2811
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.21893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988436868735333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770312267068356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770312452291733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2811
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.21893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988436985376308 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770312452291733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770312657267132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988437183445789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770312657267132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770313201926720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2811
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.21893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988437729153249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770313201926720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7737770313248844624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6094946038007079056}
+    m_Modifications:
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2811
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.21893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614869945497716763, guid: 7314ee99e7283d2479407630e215a216,
+        type: 3}
+      propertyPath: m_Name
+      value: Defender Longsword (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7314ee99e7283d2479407630e215a216, type: 3}
+--- !u!4 &4315988437782919665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802727073667404449, guid: 7314ee99e7283d2479407630e215a216,
+    type: 3}
+  m_PrefabInstance: {fileID: 7737770313248844624}
+  m_PrefabAsset: {fileID: 0}
