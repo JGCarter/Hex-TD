@@ -55,7 +55,7 @@ public class WaveSpawnerScript : MonoBehaviour
 
     void SpawnMob()
     {       
-        Instantiate(mobPrefab, spawnPoints[spawnpointIndex % spawnpointNumber].position - new Vector3(0f, 1f, 0f), Quaternion.Euler(0, 0, 0));
+        Instantiate(mobPrefab, spawnPoints[spawnpointIndex % spawnpointNumber].position + new Vector3(0f, 1f, 0f), Quaternion.Euler(0, 0, 0));
         spawnpointIndex++;
     }
 
