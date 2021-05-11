@@ -30,7 +30,7 @@ public class Defender2HScript : DefenderBaseScript
 
             attackCountdown = 1f / attackSpeed;
             //audiosource.Play();
-            BaseAttackerScript mob = nearestMob.GetComponent<BaseAttackerScript>();
+            AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
             float hitDelay = 0.6f;
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
             PlayRandomAnimation();
@@ -48,7 +48,7 @@ public class Defender2HScript : DefenderBaseScript
                         float distanceToMob = Vector3.Distance(transform.position, mob2.transform.position);
                         if (distanceToMob < range && mob2 != nearestMob)
                         {
-                            BaseAttackerScript mobScript = mob2.GetComponent<BaseAttackerScript>();
+                            AttackerScript mobScript = mob2.GetComponent<AttackerScript>();
                             mobScript.Hit(baseDamage, impact, 0f, weaponType);
                         }
                     }

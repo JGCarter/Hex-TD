@@ -119,7 +119,7 @@ public class DefenderArcherScript : MonoBehaviour
 
             attackCountdown = 1f / attackSpeed;
             //audiosource.PlayDelayed(hitDelay);
-            BaseAttackerScript mob = nearestMob.GetComponent<BaseAttackerScript>();
+            AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
             animator.SetTrigger("firing");
         }

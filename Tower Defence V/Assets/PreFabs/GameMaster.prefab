@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423572268306339250}
-  - component: {fileID: 1423572268306339251}
   - component: {fileID: 1423572268306339253}
   - component: {fileID: 301622851}
   m_Layer: 0
@@ -33,23 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1423572268306339251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423572268306339248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ddb5c8c41e266e44b801c8ec1367213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mobPrefab: {fileID: 119276696815644702, guid: 61a56fa1bc6bdce49bd2adb0f2da7df6,
-    type: 3}
-  spawnPoint: {fileID: 0}
-  timeBetweenWaves: 5
-  waveCoundownText: {fileID: 0}
 --- !u!114 &1423572268306339253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,8 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 1000
   goldText: {fileID: 0}
+  lives: 20
+  livesText: {fileID: 0}
+  wave: 1
+  waveText: {fileID: 0}
+  mobsRemaining: 0
   upgrading: 0
   precheckingUpgrade: 0
+  waveInProgress: 0
+  buildingPhase: 1
 --- !u!82 &301622851
 AudioSource:
   m_ObjectHideFlags: 0

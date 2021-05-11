@@ -57,8 +57,8 @@ public class ArrowScript : MonoBehaviour
 
     void HitTarget()
     {
-        GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2f);
+        //GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        //Destroy(effectInstance, 2f);
 
         Destroy(gameObject);
     }

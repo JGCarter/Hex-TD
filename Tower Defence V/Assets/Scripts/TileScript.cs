@@ -50,7 +50,7 @@ public class TileScript : MonoBehaviour
     //Highlight the tile
     public void OnMouseOver()
     {
-        if (gameMasterScript.upgrading == false)
+        if (gameMasterScript.upgrading == false && gameMasterScript.getBuildingPhase())
         {
             GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         }
@@ -63,7 +63,7 @@ public class TileScript : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if (!EventSystem.current.IsPointerOverGameObject() && (!gameMasterScript.upgrading))   //if the UI is not intercepting the click
+        if (!EventSystem.current.IsPointerOverGameObject() && (!gameMasterScript.upgrading) && gameMasterScript.getBuildingPhase())   //if the UI is not intercepting the click
         {
             gameMasterScript.PlayUIClick();
             //Debug.Log("Tile Clicked");
@@ -131,7 +131,7 @@ public class TileScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("button disabled");
+                //Debug.Log("button disabled");
                 upgradeButtonRight.GetComponentInChildren<Text>().text = "no unit found";
                 upgradeButtonRight.gameObject.SetActive(false);
             }
@@ -144,7 +144,7 @@ public class TileScript : MonoBehaviour
 
     void TaskOnClick(GameObject chosenUpgrade)
     {
-        Debug.Log("Button Clicked");
+        //Debug.Log("Button Clicked");
         gameMasterScript.PlayUIClick();
 
         int cost = chosenUpgrade.GetComponent<UpgradeUnitScript>().unitCost - currentUnit.GetComponent<UpgradeUnitScript>().unitCost;
@@ -240,7 +240,7 @@ public class TileScript : MonoBehaviour
             yield return 0;          
         }
 
-        Debug.Log("force closing");
+        //Debug.Log("force closing");
 
         upgradeChoice1 = null;
         upgradeChoice2 = null;

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 7329f7cb422c08642be05945d3c583e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lightningAudioClip: {instanceID: 0}
+  - lightningGameObject: {fileID: 4263237919671929595, guid: 56ce3561287b23d469882f182ce2dc61,
+      type: 3}
+  - pointLightGameObject: {instanceID: 0}
+  - postPrecessingVolumeObject: {instanceID: 0}
+  - postProcessingEffectsScript: {instanceID: 0}
+  - explosionPrefab: {fileID: 2177154981928962592, guid: bacd7029bd96acb44b5d23e6b96e4b2d,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,8 +14,13 @@ public class GameMasterScript : MonoBehaviour
     public int wave = 1;
     public Text waveText;
 
+    public int mobsRemaining = 0;
+
     public bool upgrading = false;
     public bool precheckingUpgrade = false;
+
+    public bool waveInProgress = false;
+    public bool buildingPhase = true;
 
     AudioSource audioSource;
 
@@ -43,7 +48,7 @@ public class GameMasterScript : MonoBehaviour
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             if(Time.timeScale > 1)
             {
-                Debug.Log("Clamping time");
+                //Debug.Log("Clamping time");
                 Time.timeScale = 1;
             }
         }
@@ -96,11 +101,51 @@ public class GameMasterScript : MonoBehaviour
     {
         wave++;
         waveText.text = wave.ToString();
+        if (wave == 5)
+        {
+            EndBuildingPhase();
+            Debug.Log("Game over");
+        }
     }
 
     public void PlayUIClick()
     {
         audioSource.Play();
+    }
+
+    public void StartWave()
+    {
+        waveInProgress = true;
+        buildingPhase = false;
+        Debug.Log("Wave Spawning");
+    }
+
+    public void EndWave()
+    {
+        waveInProgress = false;
+        Debug.Log("WaveFinishedSpawning");
+    }
+
+    public bool getWaveStatus()
+    {
+        return waveInProgress;
+    }
+
+    public void StartBuildingPhase()
+    {
+        buildingPhase = true;
+        Debug.Log("Building Phase");
+    }
+
+    public void EndBuildingPhase()
+    {
+        buildingPhase = false;
+        Debug.Log("Building Phase ended");
+    }
+
+    public bool getBuildingPhase()
+    {
+        return buildingPhase;
     }
 
 }

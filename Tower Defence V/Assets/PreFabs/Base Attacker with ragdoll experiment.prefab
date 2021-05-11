@@ -322,9 +322,9 @@ GameObject:
   - component: {fileID: 6289256343552420452}
   - component: {fileID: 445144959074723036}
   - component: {fileID: 445144959074723011}
-  - component: {fileID: 445144959074723037}
   - component: {fileID: 2502053508855471144}
   - component: {fileID: -7034061712406084213}
+  - component: {fileID: -2927549076726004738}
   m_Layer: 9
   m_Name: Base Attacker with ragdoll experiment
   m_TagString: Attacker
@@ -397,49 +397,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &445144959074723037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787022909336840868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac233dc31b0687e4b955da02bc9ee5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameMaster: {fileID: 0}
-  rb: {fileID: 0}
-  force: 100000
-  drag: 2
-  maxHealth: 100
-  currentHealth: 0
-  value: 5
-  targetMobTag: Defender
-  range: 3
-  attackCountdown: 0
-  attackSpeed: 0.5
-  baseDamage: 10
-  coins: {fileID: 8300000, guid: 429de13498fbb314e9a36818dd20a7f9, type: 3}
-  hurtBySword:
-  - {fileID: 8300000, guid: b6c393d275ec3a54896db3987fa3c8df, type: 3}
-  - {fileID: 8300000, guid: db072660af49f2d47a73e78c70ddb6c5, type: 3}
-  - {fileID: 8300000, guid: d0eb59f39349c314bb1840756e7aad20, type: 3}
-  hurtByArrow:
-  - {fileID: 8300000, guid: fb1ef3fb8e9c2e84081e05aa76f9280f, type: 3}
-  - {fileID: 8300000, guid: 26e3b78c120e7994d91393fcfd8b61b2, type: 3}
-  - {fileID: 8300000, guid: b5f90f92bf1d8d5488871a477870b3b1, type: 3}
-  deathBySword:
-  - {fileID: 8300000, guid: 72944b9327284cb41b4c0d855fcf34fc, type: 3}
-  - {fileID: 8300000, guid: ba519497aad5ca345b2740213c7a983f, type: 3}
-  - {fileID: 8300000, guid: 3236dccdef2b6a64c961e087d3353461, type: 3}
-  deathByArrow:
-  - {fileID: 8300000, guid: 1badcb4d97f89654cb7466e48f9cec45, type: 3}
-  - {fileID: 8300000, guid: c0bb79cb1dc1b8349af61edcb0f1b3fd, type: 3}
-  - {fileID: 8300000, guid: 0ffb5be3f98cc7642a1f6ac2b2f05c51, type: 3}
-  fracturedVersion: {fileID: 3239533134804245684, guid: b25b829bfe6339d4087caf911656163c,
-    type: 3}
 --- !u!114 &2502053508855471144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +505,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2927549076726004738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787022909336840868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfd94416857b3d4082c9f149347cf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMaster: {fileID: 0}
+  rb: {fileID: 0}
+  force: 100000
+  drag: 2
+  maxHealth: 100
+  currentHealth: 0
+  value: 0
+  targetMobTag: Defender
+  range: 3
+  attackCountdown: 0
+  attackSpeed: 0.5
+  baseDamage: 10
+  coins: {fileID: 8300000, guid: 429de13498fbb314e9a36818dd20a7f9, type: 3}
+  hurtBySword:
+  - {fileID: 8300000, guid: b6c393d275ec3a54896db3987fa3c8df, type: 3}
+  - {fileID: 8300000, guid: db072660af49f2d47a73e78c70ddb6c5, type: 3}
+  - {fileID: 8300000, guid: d0eb59f39349c314bb1840756e7aad20, type: 3}
+  hurtByArrow:
+  - {fileID: 8300000, guid: fb1ef3fb8e9c2e84081e05aa76f9280f, type: 3}
+  - {fileID: 8300000, guid: 26e3b78c120e7994d91393fcfd8b61b2, type: 3}
+  - {fileID: 8300000, guid: b5f90f92bf1d8d5488871a477870b3b1, type: 3}
+  deathBySword:
+  - {fileID: 8300000, guid: 72944b9327284cb41b4c0d855fcf34fc, type: 3}
+  - {fileID: 8300000, guid: ba519497aad5ca345b2740213c7a983f, type: 3}
+  - {fileID: 8300000, guid: 3236dccdef2b6a64c961e087d3353461, type: 3}
+  deathByArrow:
+  - {fileID: 8300000, guid: 1badcb4d97f89654cb7466e48f9cec45, type: 3}
+  - {fileID: 8300000, guid: c0bb79cb1dc1b8349af61edcb0f1b3fd, type: 3}
+  - {fileID: 8300000, guid: 0ffb5be3f98cc7642a1f6ac2b2f05c51, type: 3}
+  fracturedVersion: {fileID: 0}
 --- !u!1 &961278603983655177
 GameObject:
   m_ObjectHideFlags: 0

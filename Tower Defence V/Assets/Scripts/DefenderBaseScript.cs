@@ -125,7 +125,7 @@ public class DefenderBaseScript : MonoBehaviour
 
             attackCountdown = 1f / attackSpeed;
             //audiosource.Play();
-            BaseAttackerScript mob = nearestMob.GetComponent<BaseAttackerScript>();
+            AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
             float hitDelay = 0.5f;
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
             animator.SetTrigger("attack");
