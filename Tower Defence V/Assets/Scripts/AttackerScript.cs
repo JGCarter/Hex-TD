@@ -39,6 +39,10 @@ public class AttackerScript : MonoBehaviour
     public AudioClip[] deathBySword;
     public AudioClip[] deathByArrow;
 
+    public AudioClip[] hurtByBlunt;
+    public AudioClip[] deathByBlunt;
+
+
 
     protected Animator animator;
 
@@ -158,12 +162,12 @@ public class AttackerScript : MonoBehaviour
     public virtual void Hit(float damage, Vector3 impact, float hitDelay, string weaponType)
     {
         currentHealth = currentHealth - damage;
-        baseDamage = 0;
         //string weaponType = "sword";
 
         if (currentHealth <= 0)     //If the unit is killed
         {
             gameObject.tag = "MarkedForDeath";
+            baseDamage = 0;
             StartCoroutine(DeathSound(weaponType, hitDelay));
             StartCoroutine(DeathRagdoll(impact, hitDelay));
 
@@ -219,6 +223,7 @@ public class AttackerScript : MonoBehaviour
     protected virtual IEnumerator DeathRagdoll(Vector3 impact, float hitDelay)
     {
         yield return new WaitForSeconds(hitDelay);
+        //Debug.Log(impact);
 
         gameObject.tag = "Dead";
 
@@ -236,6 +241,7 @@ public class AttackerScript : MonoBehaviour
         foreach (Rigidbody rb in bodies)
         {
             rb.velocity = bodyVelocity;
+            rb.isKinematic = false;
             //if (impact.y < 0)
             //{
             //    impact.y = 0f;
@@ -247,7 +253,7 @@ public class AttackerScript : MonoBehaviour
         GetComponent<Animator>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
 
-        //gameObject.layer = 11;
+        gameObject.layer = 11;
         Transform[] children = GetComponentsInChildren<Transform>();
         foreach (Transform child in children)
         {
@@ -257,7 +263,12 @@ public class AttackerScript : MonoBehaviour
         gameMasterScript.AddGold(value);
         gameMasterScript.mobsRemaining--;
 
-        Destroy(gameObject, 5f);
+        yield return new WaitForSeconds(10);
+        this.transform.GetChild(0).gameObject.SetActive(false);
+        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.GetComponent<PlayerAnimator>().enabled = false;
+        this.enabled = false;
+        Destroy(gameObject, 50f);
 
     }
 
@@ -272,7 +283,7 @@ public class AttackerScript : MonoBehaviour
             audioSource.PlayOneShot(deathBySword[Random.Range(0, deathBySword.Length)]);
         }
 
-        if (weaponType == "spear")
+        else if (weaponType == "spear")
         {
             audioSource.PlayOneShot(deathBySword[Random.Range(0, deathBySword.Length)]);
         }
@@ -280,6 +291,11 @@ public class AttackerScript : MonoBehaviour
         else if (weaponType == "arrow")
         {
             audioSource.PlayOneShot(deathByArrow[Random.Range(0, deathByArrow.Length)]);
+        }
+
+        else if (weaponType == "blunt")
+        {
+            audioSource.PlayOneShot(deathByBlunt[Random.Range(0, deathByBlunt.Length)]);
         }
 
         audioSource.PlayOneShot(coins);
@@ -305,6 +321,11 @@ public class AttackerScript : MonoBehaviour
             audioSource.PlayOneShot(hurtByArrow[Random.Range(0, hurtByArrow.Length)]);
         }
 
+        else if (weaponType == "blunt")
+        {
+            audioSource.PlayOneShot(hurtByBlunt[Random.Range(0, hurtByBlunt.Length)]);
+        }
+
     }
 
     protected virtual void PlayRandomAnimation()
@@ -314,7 +335,6 @@ public class AttackerScript : MonoBehaviour
         {
             animator.SetTrigger("attack");
         }
-
 
     }
 

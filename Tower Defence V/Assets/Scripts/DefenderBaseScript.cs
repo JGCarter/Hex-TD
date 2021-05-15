@@ -10,15 +10,16 @@ public class DefenderBaseScript : MonoBehaviour
 
     protected Vector3 targetPosition;
 
+    //these are default values to be changed on a unit by unit basis
     public float maxHealth = 100f;
     public float currentHealth = 0f;
-
     public string targetMobTag = "Attacker";
     public float range = 3f;
     public float attackCountdown;
     public float attackSpeed = 0.5f;
     public float baseDamage = 40f;
     public string weaponType = "sword";
+    public float hitDelay = 0.5f;
     public GameObject targetMob;
 
     protected AudioSource audiosource;
@@ -126,7 +127,6 @@ public class DefenderBaseScript : MonoBehaviour
             attackCountdown = 1f / attackSpeed;
             //audiosource.Play();
             AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
-            float hitDelay = 0.5f;
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
             animator.SetTrigger("attack");
 
@@ -151,7 +151,8 @@ public class DefenderBaseScript : MonoBehaviour
 
     protected virtual void Death()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 }

@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 5351104866599139824}
   m_Layer: 0
   m_Name: Defender Stone Thrower
-  m_TagString: Untagged
+  m_TagString: DefenderRanged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,12 +1132,14 @@ MonoBehaviour:
   currentHealth: 0
   targetMobTag: Attacker
   range: 18
+  animationLength: 2
   attackCountdown: 0
-  attackSpeed: 0.25
+  attackSpeed: 0.6
   baseDamage: 10
-  projectileSpeed: 100
-  weaponType: arrow
-  arrowPrefab: {fileID: 5218487318209658104, guid: 088c9b76c0ace0940b176d70efa7f0c3,
+  projectileSpeed: 30
+  weaponType: blunt
+  projectileSpawnDelayFactor: 0.3
+  projectilePrefab: {fileID: 5510714061755019976, guid: 4e3e351bf85694b44bfea8957c87f259,
     type: 3}
   firePoint: {fileID: 5351104865762471460}
 --- !u!1 &5306157120699935736
@@ -1195,7 +1197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351104865762471463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0025, y: -0.007500001, z: 0.014999998}
+  m_LocalPosition: {x: 0.002914, y: -0.010635, z: 0.01568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3564772457755168392}

@@ -134,6 +134,17 @@ public class GameMasterScript : MonoBehaviour
     public void StartBuildingPhase()
     {
         buildingPhase = true;
+        GameObject[] units = GameObject.FindGameObjectsWithTag("Melee Unit");
+        foreach (GameObject unit in units)
+        {
+            unit.GetComponent<UnitManagementScript>().ReplenishUnit();
+        }
+
+        GameObject[] deadUnits = GameObject.FindGameObjectsWithTag("Dead");
+        foreach (GameObject deadUnit in deadUnits)
+        {
+            Destroy(deadUnit);
+        }
         Debug.Log("Building Phase");
     }
 

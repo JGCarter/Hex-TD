@@ -508,6 +508,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -948,11 +949,12 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   targetMobTag: Attacker
-  range: 18
+  range: 24
   attackCountdown: 0
   attackSpeed: 0.25
-  baseDamage: 40
+  baseDamage: 30
   projectileSpeed: 80
+  weaponType: arrow
   arrowPrefab: {fileID: 5218487318209658104, guid: 088c9b76c0ace0940b176d70efa7f0c3,
     type: 3}
   firePoint: {fileID: 5075950073830657018}
@@ -1032,6 +1034,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1637,6 +1640,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

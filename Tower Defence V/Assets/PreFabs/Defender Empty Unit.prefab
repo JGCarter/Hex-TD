@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6437292660798644899}
   - component: {fileID: 1830751969870821613}
   m_Layer: 0
-  m_Name: EmptyUnit
+  m_Name: Defender Empty Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitCost: 0
   unitName: Empty Unit
+  range: 0
   upgrade1: {fileID: 1036636831170493372, guid: d1324cec168b2b5489bc369db3f0c722,
     type: 3}
-  upgrade2: {fileID: 7185187392400356598, guid: cbd58ba10e722704ea3948e0cb289ae4,
+  upgrade2: {fileID: 8264415834673163350, guid: a529d787105e3df4abb021e3420b1de2,
     type: 3}
   upgrade3: {fileID: 0}

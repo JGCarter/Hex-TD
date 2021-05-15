@@ -103,6 +103,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417929543226689008}
   m_ConnectedBody: {fileID: 8178174946357066239}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -273,6 +274,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533686476172648769}
   m_ConnectedBody: {fileID: 8178174946357066223}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -521,14 +523,14 @@ MonoBehaviour:
   rb: {fileID: 0}
   force: 100000
   drag: 2
-  maxHealth: 100
+  maxHealth: 200
   currentHealth: 0
   value: 0
   targetMobTag: Defender
   range: 3
   attackCountdown: 0
   attackSpeed: 0.5
-  baseDamage: 10
+  baseDamage: 40
   coins: {fileID: 8300000, guid: 429de13498fbb314e9a36818dd20a7f9, type: 3}
   hurtBySword:
   - {fileID: 8300000, guid: b6c393d275ec3a54896db3987fa3c8df, type: 3}
@@ -546,6 +548,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1badcb4d97f89654cb7466e48f9cec45, type: 3}
   - {fileID: 8300000, guid: c0bb79cb1dc1b8349af61edcb0f1b3fd, type: 3}
   - {fileID: 8300000, guid: 0ffb5be3f98cc7642a1f6ac2b2f05c51, type: 3}
+  hurtByBlunt:
+  - {fileID: 8300000, guid: 830e980cc1bc07646a4be549e43a5460, type: 3}
+  - {fileID: 8300000, guid: faf0aeaadd075fa40903a3a82a530b29, type: 3}
+  - {fileID: 8300000, guid: 1d46243f62435cc48b54c743e279fc4b, type: 3}
+  deathByBlunt:
+  - {fileID: 8300000, guid: 3292b5bbedfc116449b978e059bb5a00, type: 3}
+  - {fileID: 8300000, guid: 3292b5bbedfc116449b978e059bb5a00, type: 3}
+  - {fileID: 8300000, guid: d075edd62e938944e8c4f75d31fc27e7, type: 3}
   fracturedVersion: {fileID: 0}
 --- !u!1 &961278603983655177
 GameObject:
@@ -684,6 +694,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013364070942593686}
   m_ConnectedBody: {fileID: 8178174946357066231}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -763,6 +774,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1093,6 +1105,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2192160166241140232}
   m_ConnectedBody: {fileID: 8178174946357066239}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1398,6 +1411,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1501,6 +1515,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3831838161385348236}
   m_ConnectedBody: {fileID: 8178174946357066239}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1704,6 +1719,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4383596632597631833}
   m_ConnectedBody: {fileID: 8178174946357066225}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
@@ -1935,6 +1951,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5424981078406604526}
   m_ConnectedBody: {fileID: 8178174946357066221}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -2107,6 +2124,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5949943939056338653}
   m_ConnectedBody: {fileID: 8178174946357066221}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -2403,6 +2421,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6866961856046251624}
   m_ConnectedBody: {fileID: 8178174946357066232}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
@@ -2647,6 +2666,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2782,6 +2802,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8474557366959964541}
   m_ConnectedBody: {fileID: 8178174946357066221}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1

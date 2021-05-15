@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DefenderStoneThrowerScript : MonoBehaviour
 {
+    GameMasterScript gameMasterScript;
 
     public Rigidbody rb;
 
@@ -14,26 +15,32 @@ public class DefenderStoneThrowerScript : MonoBehaviour
 
     public string targetMobTag = "Attacker";
     public float range = 18f;
+    public float animationLength = 2f;
     public float attackCountdown;
-    public float attackSpeed = 0.25f;
+    public float attackSpeed = 0.5f;
     public float baseDamage = 10f;
-    public float projectileSpeed = 100f;
-    public string weaponType = "arrow";
+    public float projectileSpeed = 40f;
+    public string weaponType = "blunt";
+    public float projectileSpawnDelayFactor = 0.2f;
 
     //private AudioSource audiosource;
     Animator animator;
 
     GameObject nearestMob = null;
     float shortestDistance = Mathf.Infinity;
+    float nextAnimationTime = 0f;
 
-    public GameObject arrowPrefab;
+    public GameObject projectilePrefab;
     public Transform firePoint;
 
 
     //initial setup for stats and the attacking check routine
     void Start()
     {
+        gameMasterScript = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
+        //gameMasterScript = GetComponent<GameMasterScript>();
         animator = GetComponent<Animator>();
+        nextAnimationTime = Time.time + Random.Range(5f, 120f);
         currentHealth = maxHealth;
         //InvokeRepeating("UpdateTarget", 0f, 0.5f);
         targetPosition = transform.position;
@@ -42,7 +49,7 @@ public class DefenderStoneThrowerScript : MonoBehaviour
         attackCountdown = 0f;
         attackCountdown = attackCountdown - Random.Range(0f, 0.1f);
         //audiosource = GetComponent<AudioSource>();
-        animator.speed = 2 * attackSpeed;
+        //animator.speed = animationLength * attackSpeed;
         StartCoroutine(AttackCheck());
 
         IEnumerator AttackCheck()
@@ -87,6 +94,7 @@ public class DefenderStoneThrowerScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 0.1f);
         }
 
+        HandleIdleAnimation();
     }
 
 
@@ -112,8 +120,8 @@ public class DefenderStoneThrowerScript : MonoBehaviour
         if (nearestMob != null && shortestDistance <= range)
         {
 
-            float hitDelay = ((1f / attackSpeed) * 0.34f);
-            Invoke("CreateArrow", hitDelay);
+            float hitDelay = ((1f / attackSpeed) * projectileSpawnDelayFactor);
+            Invoke("CreateProjectile", hitDelay);
             hitDelay = hitDelay + shortestDistance / projectileSpeed;
 
             attackCountdown = 1f / attackSpeed;
@@ -127,13 +135,13 @@ public class DefenderStoneThrowerScript : MonoBehaviour
 
     }
 
-    private void CreateArrow()
+    private void CreateProjectile()
     {
-        GameObject arrowGO = GameObject.Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        ArrowScript arrow = arrowGO.GetComponent<ArrowScript>();
+        GameObject projectileGameObject = GameObject.Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        ProjectileHomingScript projectileHomingScript = projectileGameObject.GetComponent<ProjectileHomingScript>();
 
-        if (arrow != null)
-            arrow.Seek(nearestMob, projectileSpeed);
+        if (projectileHomingScript != null)
+            projectileHomingScript.Seek(nearestMob, projectileSpeed);
 
     }
 
@@ -141,6 +149,47 @@ public class DefenderStoneThrowerScript : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
+
+    }
+
+    private void HandleIdleAnimation()
+    {
+
+        if (gameMasterScript.getBuildingPhase())
+        {
+            animator.SetBool("idle", true);
+            if (Time.time > nextAnimationTime)
+            {
+                float randomNumber = Random.value;
+                if (randomNumber > 0.60f)
+                {
+                    animator.SetTrigger("idleAnimation1");
+                }
+
+                else if (randomNumber > 0.30f)
+                {
+                    animator.SetTrigger("idleAnimation2");
+                }
+
+                else if (randomNumber > 0.20f)
+                {
+                    animator.SetTrigger("idleAnimation3");
+                }
+
+                else
+                {
+                    animator.SetTrigger("idleAnimation4");
+                }
+                nextAnimationTime = Time.time + Random.Range(30f, 120f);
+            }
+        }
+
+        else
+        {
+            animator.SetBool("idle", false);
+            nextAnimationTime = Time.time + Random.Range(5f, 15f);
+        }
+
 
     }
 }

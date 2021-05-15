@@ -230,6 +230,8 @@ GameObject:
   - component: {fileID: 8886114029980451860}
   - component: {fileID: 3864375068672940207}
   - component: {fileID: 4187638759529633677}
+  - component: {fileID: 3097311565143789879}
+  - component: {fileID: 7898513670072756890}
   m_Layer: 9
   m_Name: Club
   m_TagString: Untagged
@@ -270,6 +272,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -300,6 +303,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3097311565143789879
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876737560467698843}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &7898513670072756890
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876737560467698843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6619212166008880561, guid: 79c63c15ffa42194f8bfcc69749ff37c, type: 3}
 --- !u!1 &1969136260534733562
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +436,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019532950265971350}
   m_ConnectedBody: {fileID: 8047940753463022699}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -696,6 +730,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3949981152853785987}
   m_ConnectedBody: {fileID: 8047940753463022660}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -806,6 +841,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3953790430308967005}
   m_ConnectedBody: {fileID: 8047940753463022699}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1008,6 +1044,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255635565353649462}
   m_ConnectedBody: {fileID: 8047940753463022699}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1393,6 +1430,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6145397449315438770}
   m_ConnectedBody: {fileID: 8047940753463022719}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1532,6 +1570,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678859153692532583}
   m_ConnectedBody: {fileID: 8047940753463022717}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -1851,7 +1890,7 @@ MonoBehaviour:
   range: 3
   attackCountdown: 0
   attackSpeed: 1
-  baseDamage: 10
+  baseDamage: 20
   coins: {fileID: 8300000, guid: 429de13498fbb314e9a36818dd20a7f9, type: 3}
   hurtBySword:
   - {fileID: 8300000, guid: a88e34f23b3af124e94782267c369c64, type: 3}
@@ -1869,6 +1908,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5cdc0e2f6f7d117458b8cd64af5356f3, type: 3}
   - {fileID: 8300000, guid: 7b32c5255f2aea34dbb253a54d785a81, type: 3}
   - {fileID: 8300000, guid: 3fc0d90e60e26ee4ab76a8e9167652fb, type: 3}
+  hurtByBlunt:
+  - {fileID: 8300000, guid: 830e980cc1bc07646a4be549e43a5460, type: 3}
+  - {fileID: 8300000, guid: faf0aeaadd075fa40903a3a82a530b29, type: 3}
+  - {fileID: 8300000, guid: 1d46243f62435cc48b54c743e279fc4b, type: 3}
+  deathByBlunt:
+  - {fileID: 8300000, guid: 1d46243f62435cc48b54c743e279fc4b, type: 3}
+  - {fileID: 8300000, guid: 3292b5bbedfc116449b978e059bb5a00, type: 3}
+  - {fileID: 8300000, guid: d075edd62e938944e8c4f75d31fc27e7, type: 3}
   fracturedVersion: {fileID: 0}
 --- !u!1 &7262716643468137186
 GameObject:
@@ -1976,6 +2023,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2124,6 +2172,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7461706753729630589}
   m_ConnectedBody: {fileID: 8047940753463022709}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -2295,6 +2344,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7805221073170351643}
   m_ConnectedBody: {fileID: 8047940753463022717}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -2434,6 +2484,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7995427036181963434}
   m_ConnectedBody: {fileID: 8047940753463022701}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -2666,6 +2717,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8642796416526007779}
   m_ConnectedBody: {fileID: 8047940753463022717}
+  m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1

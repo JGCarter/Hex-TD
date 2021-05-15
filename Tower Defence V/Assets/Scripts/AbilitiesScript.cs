@@ -19,6 +19,7 @@ public class AbilitiesScript : MonoBehaviour
 
 
     public float range = 5f;
+    public float fireBallrange = 20f;
     public float baseDamage = 200f;
     public Vector3 impact = Vector3.zero;
     public string weaponType = "none";
@@ -50,7 +51,7 @@ public class AbilitiesScript : MonoBehaviour
                 postProcessingEffectsScript.darkenScreenEffect(0.5f);
 
                 //AudioSource.PlayClipAtPoint(lightningAudioClip, hitPoint.point);
-                Debug.Log(hitPoint.point);
+                //Debug.Log(hitPoint.point);
                 GameObject[] mobs = GameObject.FindGameObjectsWithTag(targetTag);
                 foreach (GameObject mob in mobs)
                 {
@@ -88,13 +89,13 @@ public class AbilitiesScript : MonoBehaviour
                     if (mob != null)
                     {
                         float distanceToMob = Vector3.Distance(hitPoint.point, mob.transform.position);
-                        if (distanceToMob < range)
+                        if (distanceToMob < fireBallrange)
                         {
                             AttackerScript mobScript = mob.GetComponent<AttackerScript>();
                             impact = (mob.transform.position + new Vector3(0, 3, 0) - hitPoint.point);
                             impact = impact / (impact.magnitude * impact.magnitude);
-                            impact = impact * 100;
-                            mobScript.Hit(baseDamage / (distanceToMob + 1), impact, 0f, weaponType);
+                            impact = impact * 200;
+                            mobScript.Hit(baseDamage / ((distanceToMob/10) + 1), impact, 0f, weaponType);
                         }
                     }
                 }
