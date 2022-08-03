@@ -33,7 +33,7 @@ public class Defender2HScript : DefenderBaseScript
             AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
             float hitDelay = 0.6f;
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
-            PlayRandomAnimation();
+            PlayAttackAnimation();
 
             StartCoroutine(AOEDamage());
 
@@ -68,7 +68,7 @@ public class Defender2HScript : DefenderBaseScript
 
 
 
-    private void PlayRandomAnimation()
+    protected override void PlayAttackAnimation()
     {
         if (Random.value > 0.5)
         {

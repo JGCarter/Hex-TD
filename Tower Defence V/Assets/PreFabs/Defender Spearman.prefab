@@ -417,7 +417,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: c9a6ce7c8fb68344499b2233a9d4c99c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -562,15 +562,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 2000
   maxHealth: 200
   currentHealth: 0
+  force: 200000
+  drag: 2
   targetMobTag: Attacker
   range: 6
   attackCountdown: 0
   attackSpeed: 1
   baseDamage: 20
   weaponType: spear
+  hitDelay: 0.5
+  impactMultiplyer: 20
   targetMob: {fileID: 0}
 --- !u!1 &1165959371442583777
 GameObject:

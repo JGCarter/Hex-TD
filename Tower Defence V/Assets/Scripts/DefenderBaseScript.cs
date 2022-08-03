@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class DefenderBaseScript : MonoBehaviour
 {
+    protected GameMasterScript gameMasterScript;
 
     public Rigidbody rb;
-    public float speed = 2000f;
 
     protected Vector3 targetPosition;
 
     //these are default values to be changed on a unit by unit basis
     public float maxHealth = 100f;
     public float currentHealth = 0f;
+    public float force = 200000f;
+    public float drag = 2f;
     public string targetMobTag = "Attacker";
     public float range = 3f;
     public float attackCountdown;
@@ -20,7 +22,10 @@ public class DefenderBaseScript : MonoBehaviour
     public float baseDamage = 40f;
     public string weaponType = "sword";
     public float hitDelay = 0.5f;
+    public float impactMultiplyer = 20f;
     public GameObject targetMob;
+
+    protected float nextAnimationTime = 0f;
 
     protected AudioSource audiosource;
 
@@ -30,10 +35,11 @@ public class DefenderBaseScript : MonoBehaviour
 
     protected virtual void Start()
     {
+        gameMasterScript = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody>();
-        rb.drag = 1;
+        rb.drag = drag;
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
         //InvokeRepeating("UpdateTarget", 0f, 0.5f);
         targetPosition = transform.position;
@@ -41,6 +47,8 @@ public class DefenderBaseScript : MonoBehaviour
         //InvokeRepeating("Attack", 0f, attackSpeed);
         attackCountdown = 1f / attackSpeed;
         audiosource = GetComponent<AudioSource>();
+        nextAnimationTime = Time.time + Random.Range(5f, 120f);
+
 
         StartCoroutine(AttackCheck());
 
@@ -68,7 +76,7 @@ public class DefenderBaseScript : MonoBehaviour
         {
             //return;
             Vector3 dir = targetPosition - transform.position;
-            rb.AddForce(dir.normalized * speed * Time.deltaTime);
+            rb.AddForce(dir.normalized * force * Time.deltaTime);
         }
 
 
@@ -80,6 +88,7 @@ public class DefenderBaseScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 2f * Time.deltaTime);
         }
 
+        HandleIdleAnimation();
     }
 
     protected virtual void OnMouseOver()
@@ -102,7 +111,7 @@ public class DefenderBaseScript : MonoBehaviour
 
     protected virtual void Attack()
     {
-        Vector3 impact = transform.forward * 20;
+        Vector3 impact = transform.forward * impactMultiplyer;
 
         GameObject[] mobs = GameObject.FindGameObjectsWithTag(targetMobTag);
         float shortestDistance = Mathf.Infinity;
@@ -128,11 +137,27 @@ public class DefenderBaseScript : MonoBehaviour
             //audiosource.Play();
             AttackerScript mob = nearestMob.GetComponent<AttackerScript>();
             mob.Hit(baseDamage, impact, hitDelay, weaponType);
-            animator.SetTrigger("attack");
+            //animator.SetTrigger("attack");
+            PlayAttackAnimation();
 
         }
 
         return;
+
+    }
+
+    protected virtual void PlayAttackAnimation()
+    {
+        float randomNumber = Random.value;
+        if (randomNumber > 0)
+        {
+            animator.SetTrigger("attack");
+        }
+
+    }
+
+    protected virtual void HandleIdleAnimation()
+    {
 
     }
 

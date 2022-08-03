@@ -50,4 +50,5 @@ MonoBehaviour:
     type: 3}
   upgrade2: {fileID: 8264415834673163350, guid: a529d787105e3df4abb021e3420b1de2,
     type: 3}
-  upgrade3: {fileID: 0}
+  upgrade3: {fileID: 6401364434607815379, guid: 1a9cd463a354db143944e01161ae1f77,
+    type: 3}

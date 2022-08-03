@@ -4,7 +4,7 @@ using System.Collections;
 public class AttackerClubmanScript : AttackerScript
 {
 
-    protected override void PlayRandomAnimation()
+    protected override void PlayAttackAnimation()
     {
         float randomNumber = Random.value;
         if (randomNumber > 0.66)

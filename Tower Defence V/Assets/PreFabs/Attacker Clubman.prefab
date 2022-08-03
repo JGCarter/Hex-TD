@@ -1881,8 +1881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMaster: {fileID: 0}
   rb: {fileID: 0}
-  force: 200000
-  drag: 5
+  force: 100000
+  drag: 2
   maxHealth: 100
   currentHealth: 0
   value: 5

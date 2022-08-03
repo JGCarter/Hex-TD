@@ -31,7 +31,7 @@ public class DefenderPikemanScript : DefenderBaseScript
         {
             //return;
             Vector3 dir = targetPosition - transform.position;
-            rb.AddForce(dir.normalized * speed * Time.deltaTime);
+            rb.AddForce(dir.normalized * force * Time.deltaTime);
         }
 
 

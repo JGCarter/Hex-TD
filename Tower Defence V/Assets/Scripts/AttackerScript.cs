@@ -145,7 +145,7 @@ public class AttackerScript : MonoBehaviour
             //audiosource.Play();
             DefenderBaseScript mob = nearestMob.GetComponent<DefenderBaseScript>();
             mob.Hit(baseDamage);
-            PlayRandomAnimation();
+            PlayAttackAnimation();
 
 
         }
@@ -328,7 +328,7 @@ public class AttackerScript : MonoBehaviour
 
     }
 
-    protected virtual void PlayRandomAnimation()
+    protected virtual void PlayAttackAnimation()
     {
         float randomNumber = Random.value;
         if (randomNumber > 0)
